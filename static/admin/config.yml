@@ -1,3 +1,52 @@
+backend:
+  name: git-gateway
+  branch: master
+  
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "_posts"
+    create: true
+    slug: "---"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Categories", name: "categories", widget: "list"}
+      - {label: "Description", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Comments", name: "comments", widget: "hidden", default: "true"}
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "about"
+        label: "About Page"
+        file: "_pages/about.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Permalink", name: "permalink", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+videos:
+  - name: "March 2016"
+    title: "Static Sites for JavaScript Developers"
+    URL: "https://www.youtube.com/watch?v=TJ3lj-xasdw"
+  - name: "July 2015"
+    title: "Not Your Grandad's Static Sites"
+    URL: "https://www.youtube.com/watch?v=TJ3lj-xasdw"
+	  
+publications:
+  - name: "O'Reilly Media"
+    articles:
+      - title: "Static Site Generators - Modern Tools for Static Website Development"
+        URL: "http://www.oreilly.com/web-platform/free/static-site-generators.csp"
+      - title: "Working with Static Sites (co-author with Raymond Camden)"
+        URL: "http://shop.oreilly.com/product/0636920051879.do"
+  - name: "CSS Tricks"
+    articles:
+      - title: "What Really Makes a Static Site Generator?"
+        URL: "https://css-tricks.com/really-makes-static-site-generator/"
+
 - name: "pubslist"
   label: "Publications"
   file: "_data/publications.yaml"
